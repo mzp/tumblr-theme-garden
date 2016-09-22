@@ -312,6 +312,7 @@ $(document).ready(function(){
       $newElems.imagesLoaded(function(){
         $indexwrapper.animate({ opacity: 1 });
         $indexwrapper.masonry( 'appended', $newElems, true );
+        LivePhotos.initialize();
       });
     }
   );
