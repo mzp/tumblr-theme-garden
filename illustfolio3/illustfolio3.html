@@ -136,6 +136,11 @@
         border-color: {color:Accent};
     }
 
+    .live-photo video {
+        width: auto;
+        max-width: 100%;
+    }
+
   </style>
 
   {block:IndexPage}
@@ -311,7 +316,7 @@
                 <!-- post: photo -->
                 {block:Photo}
                   <a href="{Permalink}">
-                    <img src="{PhotoURL-400}" alt="{PhotoAlt}"/>
+                    <img src="{PhotoURL-400}" alt="{PhotoAlt}" {block:LivePhoto}data-live-photo="{LivePhotoURL}" data-live-photo-still-image-time="{LivePhotoStillImageTime}"{/block:LivePhoto}/>
                   </a>
                 {/block:Photo}
 
@@ -484,7 +489,7 @@
         <div class="container full-image">
           {block:Photo}
             {LinkOpenTag}
-              <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+              <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" {block:LivePhoto}data-live-photo="{LivePhotoURL}" data-live-photo-still-image-time="{LivePhotoStillImageTime}"{/block:LivePhoto}/>
             {LinkCloseTag}
           {/block:Photo}
 
@@ -814,7 +819,7 @@
       $(".cover-image").css("height", hsize + "px");
     });
   </script>
-  <script src="http://static.tumblr.com/xlsgtjb/mt5o305mz/scripts.min.js" charset="UTF-8"></script>
+  <script src="http://static.tumblr.com/5l0lv8n/Pj1odvtaq/scripts.min.js" charset="UTF-8"></script>
 
 </body>
 </html>

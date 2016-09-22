@@ -39,6 +39,9 @@ $(document).ready(function(){
     $(".tag-list").slideToggle(200);
   });
 
+  // laphs
+  LivePhotos.initialize();
+
   // masonry
   var $indexwrapper = $('.index-post-wrapper').css({ opacity: 0 });
   $indexwrapper.imagesLoaded(function(){
